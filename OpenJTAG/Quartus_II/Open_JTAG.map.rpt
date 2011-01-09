@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Open_JTAG
-Wed Jun 02 16:01:07 2010
+Sun Jan 09 12:40:56 2011
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jun 02 16:01:07 2010        ;
+; Analysis & Synthesis Status ; Successful - Sun Jan 09 12:40:56 2011        ;
 ; Quartus II Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name               ; Open_JTAG                                    ;
 ; Top-level Entity Name       ; Open_JTAG                                    ;
 ; Family                      ; MAX II                                       ;
-; Total logic elements        ; 257                                          ;
-; Total pins                  ; 29                                           ;
+; Total logic elements        ; 345                                          ;
+; Total pins                  ; 24                                           ;
 ; Total virtual pins          ; 0                                            ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
 +-----------------------------+----------------------------------------------+
@@ -81,7 +81,7 @@ applicable agreement for further details.
 ; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
 ; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
 ; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; Off                ; Off                ;
 ; NOT Gate Push-Back                                                         ; On                 ; On                 ;
 ; Power-Up Don't Care                                                        ; On                 ; On                 ;
 ; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
@@ -133,16 +133,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                               ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path               ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------+
-; tap_sm.vhd                       ; yes             ; User VHDL File                     ; C:/AlteraWorks/91/Open JTAG/tap_sm.vhd     ;
-; clock_mux.vhd                    ; yes             ; User VHDL File                     ; C:/AlteraWorks/91/Open JTAG/clock_mux.vhd  ;
-; serializer.vhd                   ; yes             ; User VHDL File                     ; C:/AlteraWorks/91/Open JTAG/serializer.vhd ;
-; Open_JTAG.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/AlteraWorks/91/Open JTAG/Open_JTAG.bdf  ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                 ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------+
+; clock_mux.vhd                    ; yes             ; User VHDL File                     ; C:/AlteraWorks/91/NewOpenJtag/clock_mux.vhd  ;
+; Open_JTAG.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/AlteraWorks/91/NewOpenJtag/Open_JTAG.bdf  ;
+; serializer.vhd                   ; yes             ; User VHDL File                     ; C:/AlteraWorks/91/NewOpenJtag/serializer.vhd ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------+
 
 
 +--------------------------------------------------------------------+
@@ -150,46 +149,45 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 257                  ;
-;     -- Combinational with no register       ; 169                  ;
-;     -- Register only                        ; 32                   ;
-;     -- Combinational with a register        ; 56                   ;
+; Total logic elements                        ; 345                  ;
+;     -- Combinational with no register       ; 260                  ;
+;     -- Register only                        ; 20                   ;
+;     -- Combinational with a register        ; 65                   ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 134                  ;
-;     -- 3 input functions                    ; 50                   ;
-;     -- 2 input functions                    ; 30                   ;
-;     -- 1 input functions                    ; 11                   ;
-;     -- 0 input functions                    ; 0                    ;
+;     -- 4 input functions                    ; 209                  ;
+;     -- 3 input functions                    ; 57                   ;
+;     -- 2 input functions                    ; 42                   ;
+;     -- 1 input functions                    ; 16                   ;
+;     -- 0 input functions                    ; 1                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 249                  ;
-;     -- arithmetic mode                      ; 8                    ;
+;     -- normal mode                          ; 330                  ;
+;     -- arithmetic mode                      ; 15                   ;
 ;     -- qfbk mode                            ; 0                    ;
 ;     -- register cascade mode                ; 0                    ;
-;     -- synchronous clear/load mode          ; 3                    ;
-;     -- asynchronous clear/load mode         ; 1                    ;
+;     -- synchronous clear/load mode          ; 16                   ;
+;     -- asynchronous clear/load mode         ; 15                   ;
 ;                                             ;                      ;
-; Total registers                             ; 88                   ;
-; Total logic cells in carry chains           ; 10                   ;
-; I/O pins                                    ; 29                   ;
+; Total registers                             ; 85                   ;
+; Total logic cells in carry chains           ; 18                   ;
+; I/O pins                                    ; 24                   ;
 ; Maximum fan-out node                        ; clock_mux:inst1|wcks ;
-; Maximum fan-out                             ; 75                   ;
-; Total fan-out                               ; 973                  ;
-; Average fan-out                             ; 3.40                 ;
+; Maximum fan-out                             ; 72                   ;
+; Total fan-out                               ; 1343                 ;
+; Average fan-out                             ; 3.64                 ;
 +---------------------------------------------+----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                          ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name         ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
-; |Open_JTAG                 ; 257 (2)     ; 88           ; 0          ; 29   ; 0            ; 169 (2)      ; 32 (0)            ; 56 (0)           ; 10 (0)          ; 0 (0)      ; |Open_JTAG                  ; work         ;
-;    |clock_mux:inst1|       ; 21 (21)     ; 14           ; 0          ; 0    ; 0            ; 7 (7)        ; 7 (7)             ; 7 (7)            ; 6 (6)           ; 0 (0)      ; |Open_JTAG|clock_mux:inst1  ; work         ;
-;    |serializer:inst2|      ; 172 (172)   ; 58           ; 0          ; 0    ; 0            ; 114 (114)    ; 15 (15)           ; 43 (43)          ; 4 (4)           ; 0 (0)      ; |Open_JTAG|serializer:inst2 ; work         ;
-;    |tap_sm:inst|           ; 62 (62)     ; 16           ; 0          ; 0    ; 0            ; 46 (46)      ; 10 (10)           ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |Open_JTAG|tap_sm:inst      ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name        ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------+--------------+
+; |Open_JTAG                 ; 345 (1)     ; 85           ; 0          ; 24   ; 0            ; 260 (1)      ; 20 (0)            ; 65 (0)           ; 18 (0)          ; 0 (0)      ; |Open_JTAG                 ; work         ;
+;    |clock_mux:inst1|       ; 21 (21)     ; 14           ; 0          ; 0    ; 0            ; 7 (7)        ; 7 (7)             ; 7 (7)            ; 6 (6)           ; 0 (0)      ; |Open_JTAG|clock_mux:inst1 ; work         ;
+;    |serializer:inst|       ; 323 (323)   ; 71           ; 0          ; 0    ; 0            ; 252 (252)    ; 13 (13)           ; 58 (58)          ; 12 (12)         ; 0 (0)      ; |Open_JTAG|serializer:inst ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -199,10 +197,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
 ; clock_mux:inst1|cclk[0]               ; Merged with clock_mux:inst1|count[0]   ;
-; serializer:inst2|state[3]             ; Stuck at GND due to stuck port data_in ;
-; serializer:inst2|state[2]             ; Merged with serializer:inst2|state[1]  ;
-; serializer:inst2|state[1]             ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 4 ;                                        ;
+; serializer:inst|test                  ; Merged with serializer:inst|rd         ;
+; serializer:inst|ft_state[2]           ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 3 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -211,12 +208,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 88    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 3     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 85    ;
+; Number of registers using Synchronous Clear  ; 11    ;
+; Number of registers using Synchronous Load   ; 7     ;
+; Number of registers using Asynchronous Clear ; 14    ;
 ; Number of registers using Asynchronous Load  ; 1     ;
-; Number of registers using Clock Enable       ; 57    ;
+; Number of registers using Clock Enable       ; 66    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -226,11 +223,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; serializer:inst2|wr                    ; 2       ;
-; serializer:inst2|rd                    ; 2       ;
-; serializer:inst2|trst                  ; 2       ;
-; serializer:inst2|dir                   ; 19      ;
-; Total number of inverted registers = 4 ;         ;
+; serializer:inst|rd                     ; 3       ;
+; serializer:inst|trst                   ; 2       ;
+; serializer:inst|led1                   ; 1       ;
+; serializer:inst|led2                   ; 1       ;
+; serializer:inst|tap_ok                 ; 3       ;
+; serializer:inst|cd[1]                  ; 5       ;
+; serializer:inst|cd[0]                  ; 6       ;
+; serializer:inst|cd[2]                  ; 2       ;
+; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
 
 
@@ -239,17 +240,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Open_JTAG|serializer:inst2|new_state[2] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Open_JTAG|serializer:inst2|cks[2]       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Open_JTAG|serializer:inst2|shift[0]     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |Open_JTAG|serializer:inst2|state[2]     ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Open_JTAG|serializer:inst2|rbyte[6]     ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 8 LEs                ; 44 LEs                 ; Yes        ; |Open_JTAG|serializer:inst2|rbyte[3]     ;
-; 37:1               ; 2 bits    ; 48 LEs        ; 18 LEs               ; 30 LEs                 ; Yes        ; |Open_JTAG|serializer:inst2|ssm[1]       ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 4 LEs                ; 24 LEs                 ; Yes        ; |Open_JTAG|serializer:inst2|count[2]     ;
-; 40:1               ; 2 bits    ; 52 LEs        ; 22 LEs               ; 30 LEs                 ; Yes        ; |Open_JTAG|serializer:inst2|ssm[2]       ;
-; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |Open_JTAG|serializer:inst2|db[0]~reg0   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Open_JTAG|serializer:inst2|Add0         ;
+; 20:1               ; 6 bits    ; 78 LEs        ; 12 LEs               ; 66 LEs                 ; Yes        ; |Open_JTAG|serializer:inst|tdo_in[0]     ;
+; 35:1               ; 4 bits    ; 92 LEs        ; 8 LEs                ; 84 LEs                 ; Yes        ; |Open_JTAG|serializer:inst|tap_nstate[3] ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 4 LEs                ; 14 LEs                 ; Yes        ; |Open_JTAG|serializer:inst|tdo_in[7]     ;
+; 23:1               ; 5 bits    ; 75 LEs        ; 15 LEs               ; 60 LEs                 ; Yes        ; |Open_JTAG|serializer:inst|ft_byte[4]    ;
+; 47:1               ; 3 bits    ; 93 LEs        ; 3 LEs                ; 90 LEs                 ; Yes        ; |Open_JTAG|serializer:inst|byte_count[5] ;
+; 47:1               ; 4 bits    ; 124 LEs       ; 8 LEs                ; 116 LEs                ; Yes        ; |Open_JTAG|serializer:inst|byte_count[3] ;
+; 57:1               ; 3 bits    ; 114 LEs       ; 24 LEs               ; 90 LEs                 ; Yes        ; |Open_JTAG|serializer:inst|ft_state[2]   ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 10 LEs               ; 22 LEs                 ; Yes        ; |Open_JTAG|serializer:inst|tap_state[2]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |Open_JTAG|serializer:inst|led2          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Open_JTAG|serializer:inst|cd[1]         ;
+; 1:1                ; 6 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |Open_JTAG|serializer:inst|db[4]~reg0    ;
+; 1:1                ; 2 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; Yes        ; |Open_JTAG|serializer:inst|db[6]~reg0    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
@@ -259,35 +261,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jun 02 16:01:02 2010
+    Info: Processing started: Sun Jan 09 12:40:50 2011
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Open_JTAG -c Open_JTAG
-Info: Found 2 design units, including 1 entities, in source file tap_sm.vhd
-    Info: Found design unit 1: tap_sm-rtl
-    Info: Found entity 1: tap_sm
 Info: Found 2 design units, including 1 entities, in source file clock_mux.vhd
     Info: Found design unit 1: clock_mux-rtl
     Info: Found entity 1: clock_mux
-Info: Found 2 design units, including 1 entities, in source file serializer.vhd
-    Info: Found design unit 1: serializer-rtl
-    Info: Found entity 1: serializer
 Info: Found 1 design units, including 1 entities, in source file open_jtag.bdf
     Info: Found entity 1: Open_JTAG
+Info: Found 2 design units, including 1 entities, in source file serializer.vhd
+    Info: Found design unit 1: serializer-behavioural
+    Info: Found entity 1: serializer
 Info: Elaborating entity "Open_JTAG" for the top level hierarchy
-Info: Elaborating entity "tap_sm" for hierarchy "tap_sm:inst"
+Info: Elaborating entity "serializer" for hierarchy "serializer:inst"
+Warning (10036): Verilog HDL or VHDL warning at serializer.vhd(60): object "ad_clock" assigned a value but never read
 Info: Elaborating entity "clock_mux" for hierarchy "clock_mux:inst1"
-Info: Elaborating entity "serializer" for hierarchy "serializer:inst2"
-Warning (10540): VHDL Signal Declaration warning at serializer.vhd(25): used explicit default value for signal "siwu" because signal was never assigned a value
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rst"
-Info: Implemented 286 device resources after synthesis - the final resource count might be different
-    Info: Implemented 5 input pins
-    Info: Implemented 16 output pins
+Info: Registers with preset signals will power-up high
+Info: Implemented 369 device resources after synthesis - the final resource count might be different
+    Info: Implemented 6 input pins
+    Info: Implemented 10 output pins
     Info: Implemented 8 bidirectional pins
-    Info: Implemented 257 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Implemented 345 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 187 megabytes
-    Info: Processing ended: Wed Jun 02 16:01:07 2010
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Sun Jan 09 12:40:56 2011
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 
