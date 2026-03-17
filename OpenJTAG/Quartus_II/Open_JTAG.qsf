@@ -49,10 +49,45 @@ set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 5
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
-set_global_assignment -name VECTOR_WAVEFORM_FILE Open_JTAG.vwf
-set_global_assignment -name VHDL_FILE tap_sm.vhd
 set_global_assignment -name VHDL_FILE clock_mux.vhd
-set_global_assignment -name VHDL_FILE serializer.vhd
 set_global_assignment -name BDF_FILE Open_JTAG.bdf
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_2 -to db[0]
+set_location_assignment PIN_3 -to db[1]
+set_location_assignment PIN_4 -to db[2]
+set_location_assignment PIN_5 -to db[3]
+set_location_assignment PIN_6 -to db[4]
+set_location_assignment PIN_7 -to db[5]
+set_location_assignment PIN_8 -to db[6]
+set_location_assignment PIN_15 -to db[7]
+set_location_assignment PIN_16 -to rd
+set_location_assignment PIN_19 -to rxf
+set_location_assignment PIN_18 -to txe
+set_location_assignment PIN_17 -to wr
+set_location_assignment PIN_47 -to tdi
+set_location_assignment PIN_50 -to tdo
+set_location_assignment PIN_41 -to trst
+set_location_assignment PIN_51 -to tck
+set_location_assignment PIN_49 -to tms
+set_global_assignment -name MISC_FILE "C:/AlteraWorks/91/Open JTAG/Open_JTAG.dpf"
+set_location_assignment PIN_12 -to clk
+set_global_assignment -name MISC_FILE "C:/AlteraWorks/91/NewOpenJtag/Open_JTAG.dpf"
+set_location_assignment PIN_21 -to rst
+set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_location_assignment PIN_38 -to led1
+set_location_assignment PIN_36 -to led2
+set_location_assignment PIN_26 -to wcks
+set_global_assignment -name FMAX_REQUIREMENT "48 MHz" -section_id clk
+set_instance_assignment -name CLOCK_SETTINGS clk -to clk
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_location_assignment PIN_27 -to test
+set_location_assignment PIN_40 -to pwr
+set_global_assignment -name VHDL_FILE serializer.vhd
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to tms
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to tck
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to tdi
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to trst

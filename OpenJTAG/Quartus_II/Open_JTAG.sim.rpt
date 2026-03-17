@@ -1,0 +1,806 @@
+Simulator report for Open_JTAG
+Fri Aug 13 16:01:11 2010
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 4.0 us       ;
+; Simulation Netlist Size     ; 320 nodes    ;
+; Simulation Coverage         ;       7.34 % ;
+; Total Number of Transitions ; 1867         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; MAX II       ;
+; Device                      ; EPM570T100C5 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       7.34 % ;
+; Total nodes checked                                 ; 320          ;
+; Total output ports checked                          ; 327          ;
+; Total output ports with complete 1/0-value coverage ; 24           ;
+; Total output ports with no 1/0-value coverage       ; 296          ;
+; Total output ports with no 1-value coverage         ; 300          ;
+; Total output ports with no 0-value coverage         ; 299          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                               ;
++----------------------------------------+-----------------------------------------------+------------------+
+; Node Name                              ; Output Port Name                              ; Output Port Type ;
++----------------------------------------+-----------------------------------------------+------------------+
+; |Open_JTAG|clock_mux:inst1|wcks        ; |Open_JTAG|clock_mux:inst1|wcks               ; regout           ;
+; |Open_JTAG|clock_mux:inst1|cclk[6]     ; |Open_JTAG|clock_mux:inst1|cclk[6]            ; regout           ;
+; |Open_JTAG|clock_mux:inst1|cclk[1]     ; |Open_JTAG|clock_mux:inst1|cclk[1]            ; regout           ;
+; |Open_JTAG|clock_mux:inst1|cclk[3]     ; |Open_JTAG|clock_mux:inst1|Mux0~2             ; combout          ;
+; |Open_JTAG|clock_mux:inst1|cclk[4]     ; |Open_JTAG|clock_mux:inst1|Mux0~3             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~5 ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~5        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~6 ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~6        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~7 ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~7        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux59~0       ; |Open_JTAG|ftdi_wr:inst2|Mux59~0              ; combout          ;
+; |Open_JTAG|clock_mux:inst1|count[6]    ; |Open_JTAG|clock_mux:inst1|count[6]           ; regout           ;
+; |Open_JTAG|clock_mux:inst1|count[5]    ; |Open_JTAG|clock_mux:inst1|count[5]~3COUT1_25 ; cout1            ;
+; |Open_JTAG|clock_mux:inst1|count[2]    ; |Open_JTAG|clock_mux:inst1|count[2]~5         ; cout0            ;
+; |Open_JTAG|clock_mux:inst1|count[2]    ; |Open_JTAG|clock_mux:inst1|count[2]~5COUT1_21 ; cout1            ;
+; |Open_JTAG|clock_mux:inst1|count[1]    ; |Open_JTAG|clock_mux:inst1|count[1]           ; regout           ;
+; |Open_JTAG|clock_mux:inst1|count[1]    ; |Open_JTAG|clock_mux:inst1|count[1]~7         ; cout0            ;
+; |Open_JTAG|clock_mux:inst1|count[1]    ; |Open_JTAG|clock_mux:inst1|count[1]~7COUT1_19 ; cout1            ;
+; |Open_JTAG|clock_mux:inst1|count[4]    ; |Open_JTAG|clock_mux:inst1|count[4]           ; regout           ;
+; |Open_JTAG|clock_mux:inst1|count[4]    ; |Open_JTAG|clock_mux:inst1|count[4]~9COUT1_23 ; cout1            ;
+; |Open_JTAG|clock_mux:inst1|count[3]    ; |Open_JTAG|clock_mux:inst1|count[3]           ; regout           ;
+; |Open_JTAG|clock_mux:inst1|count[3]    ; |Open_JTAG|clock_mux:inst1|count[3]~11        ; cout             ;
+; |Open_JTAG|clock_mux:inst1|cclk[5]     ; |Open_JTAG|clock_mux:inst1|Mux0~0             ; combout          ;
+; |Open_JTAG|clock_mux:inst1|cclk[2]     ; |Open_JTAG|clock_mux:inst1|Mux0~1             ; combout          ;
+; |Open_JTAG|clk                         ; |Open_JTAG|clk~corein                         ; combout          ;
+; |Open_JTAG|wcks                        ; |Open_JTAG|wcks                               ; padio            ;
++----------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                     ;
++-------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                 ; Output Port Name                              ; Output Port Type ;
++-------------------------------------------+-----------------------------------------------+------------------+
+; |Open_JTAG|ftdi_wr:inst2|tms              ; |Open_JTAG|ftdi_wr:inst2|tms                  ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tck              ; |Open_JTAG|ftdi_wr:inst2|tck                  ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|trst             ; |Open_JTAG|ftdi_wr:inst2|trst                 ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|led1             ; |Open_JTAG|ftdi_wr:inst2|led1                 ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|led2             ; |Open_JTAG|ftdi_wr:inst2|led2                 ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[6]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[6]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[5]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[5]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~4          ; |Open_JTAG|ftdi_wr:inst2|Mux91~4              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[3]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[3]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[2]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[2]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[1]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[1]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~5          ; |Open_JTAG|ftdi_wr:inst2|Mux91~5              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|sm_msb~0         ; |Open_JTAG|ftdi_wr:inst2|sm_msb~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[1]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[1]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[2]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[2]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux39~0          ; |Open_JTAG|ftdi_wr:inst2|Mux39~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[0]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[0]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[1]      ; |Open_JTAG|ftdi_wr:inst2|sm_state[1]          ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~6          ; |Open_JTAG|ftdi_wr:inst2|Mux91~6              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~7          ; |Open_JTAG|ftdi_wr:inst2|Mux91~7              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[3]      ; |Open_JTAG|ftdi_wr:inst2|sm_state[3]          ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]      ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]          ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux0~0           ; |Open_JTAG|ftdi_wr:inst2|Mux0~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~8          ; |Open_JTAG|ftdi_wr:inst2|Mux91~8              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~9          ; |Open_JTAG|ftdi_wr:inst2|Mux91~9              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal19~0        ; |Open_JTAG|ftdi_wr:inst2|Equal19~0            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~10         ; |Open_JTAG|ftdi_wr:inst2|Mux91~10             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~11         ; |Open_JTAG|ftdi_wr:inst2|Mux91~11             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[0]     ; |Open_JTAG|ftdi_wr:inst2|tap_state[0]~COMBOUT ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]     ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]         ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[3]     ; |Open_JTAG|ftdi_wr:inst2|tap_state[3]~COMBOUT ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~0            ; |Open_JTAG|ftdi_wr:inst2|tms~0                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~0         ; |Open_JTAG|ftdi_wr:inst2|Equal1~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|rd_wr~0          ; |Open_JTAG|ftdi_wr:inst2|rd_wr~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|rd_wr~1          ; |Open_JTAG|ftdi_wr:inst2|rd_wr~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_pos~0        ; |Open_JTAG|ftdi_wr:inst2|tap_pos~0            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~1         ; |Open_JTAG|ftdi_wr:inst2|Equal1~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~2         ; |Open_JTAG|ftdi_wr:inst2|Equal1~2             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~1            ; |Open_JTAG|ftdi_wr:inst2|tms~1                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[2]    ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[2]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]    ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Equal0~0         ; |Open_JTAG|ftdi_wr:inst2|Equal0~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[1]    ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[1]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[0]    ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[0]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Equal15~0        ; |Open_JTAG|ftdi_wr:inst2|Equal15~0            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal0~1         ; |Open_JTAG|ftdi_wr:inst2|Equal0~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_ok           ; |Open_JTAG|ftdi_wr:inst2|tap_ok               ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tms~2            ; |Open_JTAG|ftdi_wr:inst2|tms~2                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|rd_wr~2          ; |Open_JTAG|ftdi_wr:inst2|rd_wr~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|rd_wr~3          ; |Open_JTAG|ftdi_wr:inst2|rd_wr~3              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal18~0        ; |Open_JTAG|ftdi_wr:inst2|Equal18~0            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add2~0           ; |Open_JTAG|ftdi_wr:inst2|Add2~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal15~1        ; |Open_JTAG|ftdi_wr:inst2|Equal15~1            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal15~2        ; |Open_JTAG|ftdi_wr:inst2|Equal15~2            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add2~1           ; |Open_JTAG|ftdi_wr:inst2|Add2~1               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal15~3        ; |Open_JTAG|ftdi_wr:inst2|Equal15~3            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal18~1        ; |Open_JTAG|ftdi_wr:inst2|Equal18~1            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~6      ; |Open_JTAG|ftdi_wr:inst2|tap_state~6          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~3            ; |Open_JTAG|ftdi_wr:inst2|tms~3                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~4            ; |Open_JTAG|ftdi_wr:inst2|tms~4                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~5            ; |Open_JTAG|ftdi_wr:inst2|tms~5                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~6            ; |Open_JTAG|ftdi_wr:inst2|tms~6                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~12         ; |Open_JTAG|ftdi_wr:inst2|Mux91~12             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tck~0            ; |Open_JTAG|ftdi_wr:inst2|tck~0                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux107~0         ; |Open_JTAG|ftdi_wr:inst2|Mux107~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux107~1         ; |Open_JTAG|ftdi_wr:inst2|Mux107~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|wr~0             ; |Open_JTAG|ftdi_wr:inst2|wr~0                 ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|rd~0             ; |Open_JTAG|ftdi_wr:inst2|rd~0                 ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tdi~0            ; |Open_JTAG|ftdi_wr:inst2|tdi~0                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux112~0         ; |Open_JTAG|ftdi_wr:inst2|Mux112~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux0~1           ; |Open_JTAG|ftdi_wr:inst2|Mux0~1               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux92~0          ; |Open_JTAG|ftdi_wr:inst2|Mux92~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux57~0          ; |Open_JTAG|ftdi_wr:inst2|Mux57~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|trst~0           ; |Open_JTAG|ftdi_wr:inst2|trst~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|trst~1           ; |Open_JTAG|ftdi_wr:inst2|trst~1               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|cd[1]            ; |Open_JTAG|ftdi_wr:inst2|cd[1]                ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|cd[2]            ; |Open_JTAG|ftdi_wr:inst2|cd[2]                ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|cd[0]            ; |Open_JTAG|ftdi_wr:inst2|cd[0]                ; regout           ;
+; |Open_JTAG|clock_mux:inst1|Equal0~0       ; |Open_JTAG|clock_mux:inst1|Equal0~0           ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[5]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[5]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~0     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~0         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_2nd~0         ; |Open_JTAG|ftdi_wr:inst2|ft_2nd~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_msb~1         ; |Open_JTAG|ftdi_wr:inst2|sm_msb~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_msb~2         ; |Open_JTAG|ftdi_wr:inst2|sm_msb~2             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[6]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[6]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~0           ; |Open_JTAG|ftdi_wr:inst2|Add7~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~0  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~0      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~1  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~1      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~2  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~2      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~3  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~3      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~4  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~4      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~5  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~5      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~5           ; |Open_JTAG|ftdi_wr:inst2|Add7~5               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~5           ; |Open_JTAG|ftdi_wr:inst2|Add7~7               ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~5           ; |Open_JTAG|ftdi_wr:inst2|Add7~7COUT1_58       ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~10          ; |Open_JTAG|ftdi_wr:inst2|Add7~10              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~10          ; |Open_JTAG|ftdi_wr:inst2|Add7~12              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~10          ; |Open_JTAG|ftdi_wr:inst2|Add7~12COUT1_56      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~15          ; |Open_JTAG|ftdi_wr:inst2|Add7~15              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~15          ; |Open_JTAG|ftdi_wr:inst2|Add7~17              ; cout             ;
+; |Open_JTAG|ftdi_wr:inst2|Mux111~0         ; |Open_JTAG|ftdi_wr:inst2|Mux111~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~6  ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~6      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count~7     ; |Open_JTAG|ftdi_wr:inst2|byte_count~7         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|wr~2             ; |Open_JTAG|ftdi_wr:inst2|wr~2                 ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux86~0          ; |Open_JTAG|ftdi_wr:inst2|Mux86~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[4]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[4]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Add5~0           ; |Open_JTAG|ftdi_wr:inst2|Add5~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~8  ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~8      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~9  ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~9      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~10 ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~10     ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~11 ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~11     ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~20          ; |Open_JTAG|ftdi_wr:inst2|Add7~20              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~20          ; |Open_JTAG|ftdi_wr:inst2|Add7~22              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~20          ; |Open_JTAG|ftdi_wr:inst2|Add7~22COUT1_54      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Add6~0           ; |Open_JTAG|ftdi_wr:inst2|Add6~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux87~0          ; |Open_JTAG|ftdi_wr:inst2|Mux87~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~14         ; |Open_JTAG|ftdi_wr:inst2|Mux91~14             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~25          ; |Open_JTAG|ftdi_wr:inst2|Add7~25              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~25          ; |Open_JTAG|ftdi_wr:inst2|Add7~27              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~25          ; |Open_JTAG|ftdi_wr:inst2|Add7~27COUT1_52      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Mux88~0          ; |Open_JTAG|ftdi_wr:inst2|Mux88~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux88~1          ; |Open_JTAG|ftdi_wr:inst2|Mux88~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~30          ; |Open_JTAG|ftdi_wr:inst2|Add7~30              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~30          ; |Open_JTAG|ftdi_wr:inst2|Add7~32              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~30          ; |Open_JTAG|ftdi_wr:inst2|Add7~32COUT1_50      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Mux89~0          ; |Open_JTAG|ftdi_wr:inst2|Mux89~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux70~0          ; |Open_JTAG|ftdi_wr:inst2|Mux70~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~1     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~1         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~2     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~2         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~3     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~3         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~4     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~4         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~5     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~5         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~6     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~6         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~7     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~7         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[2]~9     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[2]~9         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux67~0          ; |Open_JTAG|ftdi_wr:inst2|Mux67~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux67~1          ; |Open_JTAG|ftdi_wr:inst2|Mux67~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[3]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[3]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~10    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~10        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~11    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~11        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~12    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~12        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux57~1          ; |Open_JTAG|ftdi_wr:inst2|Mux57~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux69~0          ; |Open_JTAG|ftdi_wr:inst2|Mux69~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux69~1          ; |Open_JTAG|ftdi_wr:inst2|Mux69~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[1]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[1]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux68~0          ; |Open_JTAG|ftdi_wr:inst2|Mux68~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux68~1          ; |Open_JTAG|ftdi_wr:inst2|Mux68~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[2]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[2]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux71~0          ; |Open_JTAG|ftdi_wr:inst2|Mux71~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~35          ; |Open_JTAG|ftdi_wr:inst2|Add7~35              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~35          ; |Open_JTAG|ftdi_wr:inst2|Add7~37              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~35          ; |Open_JTAG|ftdi_wr:inst2|Add7~37COUT1_48      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Mux90~0          ; |Open_JTAG|ftdi_wr:inst2|Mux90~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_tms~0         ; |Open_JTAG|ftdi_wr:inst2|sm_tms~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux28~0          ; |Open_JTAG|ftdi_wr:inst2|Mux28~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~2          ; |Open_JTAG|ftdi_wr:inst2|Mux74~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~3          ; |Open_JTAG|ftdi_wr:inst2|Mux74~3              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~4          ; |Open_JTAG|ftdi_wr:inst2|Mux74~4              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~5          ; |Open_JTAG|ftdi_wr:inst2|Mux74~5              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~0  ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~0      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux26~0          ; |Open_JTAG|ftdi_wr:inst2|Mux26~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux72~2          ; |Open_JTAG|ftdi_wr:inst2|Mux72~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~0    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~0        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~1    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~1        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~2    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~2        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~3    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~3        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux29~0          ; |Open_JTAG|ftdi_wr:inst2|Mux29~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~4    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~4        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux73~0          ; |Open_JTAG|ftdi_wr:inst2|Mux73~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux39~1          ; |Open_JTAG|ftdi_wr:inst2|Mux39~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux73~1          ; |Open_JTAG|ftdi_wr:inst2|Mux73~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux73~2          ; |Open_JTAG|ftdi_wr:inst2|Mux73~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_pos~1        ; |Open_JTAG|ftdi_wr:inst2|tap_pos~1            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~7      ; |Open_JTAG|ftdi_wr:inst2|tap_state~7          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~8      ; |Open_JTAG|ftdi_wr:inst2|tap_state~8          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~9      ; |Open_JTAG|ftdi_wr:inst2|tap_state~9          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~10     ; |Open_JTAG|ftdi_wr:inst2|tap_state~10         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux111~1         ; |Open_JTAG|ftdi_wr:inst2|Mux111~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~11  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~11      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux110~0         ; |Open_JTAG|ftdi_wr:inst2|Mux110~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~12  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~12      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~3         ; |Open_JTAG|ftdi_wr:inst2|Equal1~3             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~4         ; |Open_JTAG|ftdi_wr:inst2|Equal1~4             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~13  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~13      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~14  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~14      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~15  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~15      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~16  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~16      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~17  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~17      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~18  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~18      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~19  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~19      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~20  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~20      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~21  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~21      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~22  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~22      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux110~1         ; |Open_JTAG|ftdi_wr:inst2|Mux110~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~23  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~23      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[1]~24  ; |Open_JTAG|ftdi_wr:inst2|tap_state[1]~24      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add2~2           ; |Open_JTAG|ftdi_wr:inst2|Add2~2               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add1~0           ; |Open_JTAG|ftdi_wr:inst2|Add1~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux109~0         ; |Open_JTAG|ftdi_wr:inst2|Mux109~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux109~1         ; |Open_JTAG|ftdi_wr:inst2|Mux109~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~25     ; |Open_JTAG|ftdi_wr:inst2|tap_state~25         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~26     ; |Open_JTAG|ftdi_wr:inst2|tap_state~26         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~27     ; |Open_JTAG|ftdi_wr:inst2|tap_state~27         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~28     ; |Open_JTAG|ftdi_wr:inst2|tap_state~28         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~29     ; |Open_JTAG|ftdi_wr:inst2|tap_state~29         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~30     ; |Open_JTAG|ftdi_wr:inst2|tap_state~30         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~31     ; |Open_JTAG|ftdi_wr:inst2|tap_state~31         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~32     ; |Open_JTAG|ftdi_wr:inst2|tap_state~32         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~33     ; |Open_JTAG|ftdi_wr:inst2|tap_state~33         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux92~1          ; |Open_JTAG|ftdi_wr:inst2|Mux92~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~1  ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~1      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~2  ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~2      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~0    ; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~0        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~1    ; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~1        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~2    ; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~2        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~3    ; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~3        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux63~1          ; |Open_JTAG|ftdi_wr:inst2|Mux63~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]~13    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]~13        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[7]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[7]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux63~2          ; |Open_JTAG|ftdi_wr:inst2|Mux63~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux63~3          ; |Open_JTAG|ftdi_wr:inst2|Mux63~3              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux63~4          ; |Open_JTAG|ftdi_wr:inst2|Mux63~4              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]~14    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]~14        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|cd[2]~0          ; |Open_JTAG|ftdi_wr:inst2|cd[2]~0              ; combout          ;
+; |Open_JTAG|clock_mux:inst1|count[5]       ; |Open_JTAG|clock_mux:inst1|count[5]~3         ; cout0            ;
+; |Open_JTAG|clock_mux:inst1|count[4]       ; |Open_JTAG|clock_mux:inst1|count[4]~9         ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Mux65~0          ; |Open_JTAG|ftdi_wr:inst2|Mux65~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux65~1          ; |Open_JTAG|ftdi_wr:inst2|Mux65~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[5]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[5]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[6]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[6]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux64~0          ; |Open_JTAG|ftdi_wr:inst2|Mux64~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux64~1          ; |Open_JTAG|ftdi_wr:inst2|Mux64~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux64~2          ; |Open_JTAG|ftdi_wr:inst2|Mux64~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[6]~16    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[6]~16        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|db[7]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[7]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[7]~en         ; |Open_JTAG|ftdi_wr:inst2|db[7]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[6]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[6]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[6]~en         ; |Open_JTAG|ftdi_wr:inst2|db[6]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[5]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[5]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[5]~en         ; |Open_JTAG|ftdi_wr:inst2|db[5]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[4]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[4]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[4]~en         ; |Open_JTAG|ftdi_wr:inst2|db[4]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[3]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[3]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[3]~en         ; |Open_JTAG|ftdi_wr:inst2|db[3]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[2]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[2]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[2]~en         ; |Open_JTAG|ftdi_wr:inst2|db[2]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[1]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[1]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[1]~en         ; |Open_JTAG|ftdi_wr:inst2|db[1]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[0]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[0]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[0]~en         ; |Open_JTAG|ftdi_wr:inst2|db[0]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux66~0          ; |Open_JTAG|ftdi_wr:inst2|Mux66~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux66~1          ; |Open_JTAG|ftdi_wr:inst2|Mux66~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[4]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[4]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]~4      ; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]~4          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|db[2]~8          ; |Open_JTAG|ftdi_wr:inst2|db[2]~8              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|db[2]~9          ; |Open_JTAG|ftdi_wr:inst2|db[2]~9              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux0~2           ; |Open_JTAG|ftdi_wr:inst2|Mux0~2               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~15         ; |Open_JTAG|ftdi_wr:inst2|Mux91~15             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~7          ; |Open_JTAG|ftdi_wr:inst2|Mux74~7              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux72~4          ; |Open_JTAG|ftdi_wr:inst2|Mux72~4              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~34     ; |Open_JTAG|ftdi_wr:inst2|tap_state~34         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~35     ; |Open_JTAG|ftdi_wr:inst2|tap_state~35         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]~5      ; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]~5          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~36  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~36      ; combout          ;
+; |Open_JTAG|~GND                           ; |Open_JTAG|~GND                               ; combout          ;
+; |Open_JTAG|rst                            ; |Open_JTAG|rst~corein                         ; combout          ;
+; |Open_JTAG|txe                            ; |Open_JTAG|txe~corein                         ; combout          ;
+; |Open_JTAG|rxf                            ; |Open_JTAG|rxf~corein                         ; combout          ;
+; |Open_JTAG|pwr                            ; |Open_JTAG|pwr~corein                         ; combout          ;
+; |Open_JTAG|tdo                            ; |Open_JTAG|tdo~corein                         ; combout          ;
+; |Open_JTAG|tms                            ; |Open_JTAG|tms                                ; padio            ;
+; |Open_JTAG|tck                            ; |Open_JTAG|tck                                ; padio            ;
+; |Open_JTAG|wr                             ; |Open_JTAG|wr                                 ; padio            ;
+; |Open_JTAG|rd                             ; |Open_JTAG|rd                                 ; padio            ;
+; |Open_JTAG|tdi                            ; |Open_JTAG|tdi                                ; padio            ;
+; |Open_JTAG|trst                           ; |Open_JTAG|trst                               ; padio            ;
+; |Open_JTAG|led1                           ; |Open_JTAG|led1                               ; padio            ;
+; |Open_JTAG|led2                           ; |Open_JTAG|led2                               ; padio            ;
+; |Open_JTAG|test                           ; |Open_JTAG|test                               ; padio            ;
+; |Open_JTAG|db[7]                          ; |Open_JTAG|db~0                               ; combout          ;
+; |Open_JTAG|db[7]                          ; |Open_JTAG|db[7]~output                       ; padio            ;
+; |Open_JTAG|db[6]                          ; |Open_JTAG|db~1                               ; combout          ;
+; |Open_JTAG|db[6]                          ; |Open_JTAG|db[6]~output                       ; padio            ;
+; |Open_JTAG|db[5]                          ; |Open_JTAG|db~2                               ; combout          ;
+; |Open_JTAG|db[5]                          ; |Open_JTAG|db[5]~output                       ; padio            ;
+; |Open_JTAG|db[4]                          ; |Open_JTAG|db~3                               ; combout          ;
+; |Open_JTAG|db[4]                          ; |Open_JTAG|db[4]~output                       ; padio            ;
+; |Open_JTAG|db[3]                          ; |Open_JTAG|db~4                               ; combout          ;
+; |Open_JTAG|db[3]                          ; |Open_JTAG|db[3]~output                       ; padio            ;
+; |Open_JTAG|db[2]                          ; |Open_JTAG|db~5                               ; combout          ;
+; |Open_JTAG|db[2]                          ; |Open_JTAG|db[2]~output                       ; padio            ;
+; |Open_JTAG|db[1]                          ; |Open_JTAG|db~6                               ; combout          ;
+; |Open_JTAG|db[1]                          ; |Open_JTAG|db[1]~output                       ; padio            ;
+; |Open_JTAG|db[0]                          ; |Open_JTAG|db~7                               ; combout          ;
+; |Open_JTAG|db[0]                          ; |Open_JTAG|db[0]~output                       ; padio            ;
++-------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                     ;
++-------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                 ; Output Port Name                              ; Output Port Type ;
++-------------------------------------------+-----------------------------------------------+------------------+
+; |Open_JTAG|ftdi_wr:inst2|tms              ; |Open_JTAG|ftdi_wr:inst2|tms                  ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tck              ; |Open_JTAG|ftdi_wr:inst2|tck                  ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|trst             ; |Open_JTAG|ftdi_wr:inst2|trst                 ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|led1             ; |Open_JTAG|ftdi_wr:inst2|led1                 ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|led2             ; |Open_JTAG|ftdi_wr:inst2|led2                 ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[6]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[6]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[5]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[5]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~4          ; |Open_JTAG|ftdi_wr:inst2|Mux91~4              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[3]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[3]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[2]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[2]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[1]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[1]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~5          ; |Open_JTAG|ftdi_wr:inst2|Mux91~5              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|sm_msb~0         ; |Open_JTAG|ftdi_wr:inst2|sm_msb~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[1]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[1]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[2]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[2]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux39~0          ; |Open_JTAG|ftdi_wr:inst2|Mux39~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[0]    ; |Open_JTAG|ftdi_wr:inst2|byte_count[0]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[1]      ; |Open_JTAG|ftdi_wr:inst2|sm_state[1]          ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~6          ; |Open_JTAG|ftdi_wr:inst2|Mux91~6              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~7          ; |Open_JTAG|ftdi_wr:inst2|Mux91~7              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[3]      ; |Open_JTAG|ftdi_wr:inst2|sm_state[3]          ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]      ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]          ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux0~0           ; |Open_JTAG|ftdi_wr:inst2|Mux0~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~8          ; |Open_JTAG|ftdi_wr:inst2|Mux91~8              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~9          ; |Open_JTAG|ftdi_wr:inst2|Mux91~9              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal19~0        ; |Open_JTAG|ftdi_wr:inst2|Equal19~0            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~10         ; |Open_JTAG|ftdi_wr:inst2|Mux91~10             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~11         ; |Open_JTAG|ftdi_wr:inst2|Mux91~11             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[0]     ; |Open_JTAG|ftdi_wr:inst2|tap_state[0]~COMBOUT ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]     ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]         ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[3]     ; |Open_JTAG|ftdi_wr:inst2|tap_state[3]~COMBOUT ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~0            ; |Open_JTAG|ftdi_wr:inst2|tms~0                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~0         ; |Open_JTAG|ftdi_wr:inst2|Equal1~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|rd_wr~0          ; |Open_JTAG|ftdi_wr:inst2|rd_wr~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|rd_wr~1          ; |Open_JTAG|ftdi_wr:inst2|rd_wr~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_pos~0        ; |Open_JTAG|ftdi_wr:inst2|tap_pos~0            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~1         ; |Open_JTAG|ftdi_wr:inst2|Equal1~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~2         ; |Open_JTAG|ftdi_wr:inst2|Equal1~2             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~1            ; |Open_JTAG|ftdi_wr:inst2|tms~1                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[2]    ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[2]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]    ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Equal0~0         ; |Open_JTAG|ftdi_wr:inst2|Equal0~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[1]    ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[1]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[0]    ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[0]        ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Equal15~0        ; |Open_JTAG|ftdi_wr:inst2|Equal15~0            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal0~1         ; |Open_JTAG|ftdi_wr:inst2|Equal0~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_ok           ; |Open_JTAG|ftdi_wr:inst2|tap_ok               ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tms~2            ; |Open_JTAG|ftdi_wr:inst2|tms~2                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|rd_wr~2          ; |Open_JTAG|ftdi_wr:inst2|rd_wr~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|rd_wr~3          ; |Open_JTAG|ftdi_wr:inst2|rd_wr~3              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal18~0        ; |Open_JTAG|ftdi_wr:inst2|Equal18~0            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add2~0           ; |Open_JTAG|ftdi_wr:inst2|Add2~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal15~1        ; |Open_JTAG|ftdi_wr:inst2|Equal15~1            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal15~2        ; |Open_JTAG|ftdi_wr:inst2|Equal15~2            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add2~1           ; |Open_JTAG|ftdi_wr:inst2|Add2~1               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal15~3        ; |Open_JTAG|ftdi_wr:inst2|Equal15~3            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal18~1        ; |Open_JTAG|ftdi_wr:inst2|Equal18~1            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~6      ; |Open_JTAG|ftdi_wr:inst2|tap_state~6          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~3            ; |Open_JTAG|ftdi_wr:inst2|tms~3                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~4            ; |Open_JTAG|ftdi_wr:inst2|tms~4                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~5            ; |Open_JTAG|ftdi_wr:inst2|tms~5                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tms~6            ; |Open_JTAG|ftdi_wr:inst2|tms~6                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~12         ; |Open_JTAG|ftdi_wr:inst2|Mux91~12             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tck~0            ; |Open_JTAG|ftdi_wr:inst2|tck~0                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux107~0         ; |Open_JTAG|ftdi_wr:inst2|Mux107~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux107~1         ; |Open_JTAG|ftdi_wr:inst2|Mux107~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|wr~0             ; |Open_JTAG|ftdi_wr:inst2|wr~0                 ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_state[1]      ; |Open_JTAG|ftdi_wr:inst2|ft_state[1]          ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tdi~0            ; |Open_JTAG|ftdi_wr:inst2|tdi~0                ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux112~0         ; |Open_JTAG|ftdi_wr:inst2|Mux112~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux0~1           ; |Open_JTAG|ftdi_wr:inst2|Mux0~1               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux92~0          ; |Open_JTAG|ftdi_wr:inst2|Mux92~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux57~0          ; |Open_JTAG|ftdi_wr:inst2|Mux57~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|trst~0           ; |Open_JTAG|ftdi_wr:inst2|trst~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|trst~1           ; |Open_JTAG|ftdi_wr:inst2|trst~1               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|cd[1]            ; |Open_JTAG|ftdi_wr:inst2|cd[1]                ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|cd[2]            ; |Open_JTAG|ftdi_wr:inst2|cd[2]                ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|cd[0]            ; |Open_JTAG|ftdi_wr:inst2|cd[0]                ; regout           ;
+; |Open_JTAG|clock_mux:inst1|Equal0~0       ; |Open_JTAG|clock_mux:inst1|Equal0~0           ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[5]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[5]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~0     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~0         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_2nd~0         ; |Open_JTAG|ftdi_wr:inst2|ft_2nd~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_msb~1         ; |Open_JTAG|ftdi_wr:inst2|sm_msb~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_msb~2         ; |Open_JTAG|ftdi_wr:inst2|sm_msb~2             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[6]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[6]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~0           ; |Open_JTAG|ftdi_wr:inst2|Add7~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~0  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~0      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~1  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~1      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~2  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~2      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~3  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~3      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~4  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~4      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~5  ; |Open_JTAG|ftdi_wr:inst2|byte_count[7]~5      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~5           ; |Open_JTAG|ftdi_wr:inst2|Add7~5               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~5           ; |Open_JTAG|ftdi_wr:inst2|Add7~7               ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~5           ; |Open_JTAG|ftdi_wr:inst2|Add7~7COUT1_58       ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~10          ; |Open_JTAG|ftdi_wr:inst2|Add7~10              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~10          ; |Open_JTAG|ftdi_wr:inst2|Add7~12              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~10          ; |Open_JTAG|ftdi_wr:inst2|Add7~12COUT1_56      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~15          ; |Open_JTAG|ftdi_wr:inst2|Add7~15              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~15          ; |Open_JTAG|ftdi_wr:inst2|Add7~17              ; cout             ;
+; |Open_JTAG|ftdi_wr:inst2|Mux111~0         ; |Open_JTAG|ftdi_wr:inst2|Mux111~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~6  ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~6      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count~7     ; |Open_JTAG|ftdi_wr:inst2|byte_count~7         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|wr~2             ; |Open_JTAG|ftdi_wr:inst2|wr~2                 ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux86~0          ; |Open_JTAG|ftdi_wr:inst2|Mux86~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[4]       ; |Open_JTAG|ftdi_wr:inst2|ft_byte[4]           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Add5~0           ; |Open_JTAG|ftdi_wr:inst2|Add5~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~8  ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~8      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~9  ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~9      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~10 ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~10     ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~11 ; |Open_JTAG|ftdi_wr:inst2|byte_count[4]~11     ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~20          ; |Open_JTAG|ftdi_wr:inst2|Add7~20              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~20          ; |Open_JTAG|ftdi_wr:inst2|Add7~22              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~20          ; |Open_JTAG|ftdi_wr:inst2|Add7~22COUT1_54      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Add6~0           ; |Open_JTAG|ftdi_wr:inst2|Add6~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux87~0          ; |Open_JTAG|ftdi_wr:inst2|Mux87~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~14         ; |Open_JTAG|ftdi_wr:inst2|Mux91~14             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~25          ; |Open_JTAG|ftdi_wr:inst2|Add7~25              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~25          ; |Open_JTAG|ftdi_wr:inst2|Add7~27              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~25          ; |Open_JTAG|ftdi_wr:inst2|Add7~27COUT1_52      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Mux88~0          ; |Open_JTAG|ftdi_wr:inst2|Mux88~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux88~1          ; |Open_JTAG|ftdi_wr:inst2|Mux88~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~30          ; |Open_JTAG|ftdi_wr:inst2|Add7~30              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~30          ; |Open_JTAG|ftdi_wr:inst2|Add7~32              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~30          ; |Open_JTAG|ftdi_wr:inst2|Add7~32COUT1_50      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Mux89~0          ; |Open_JTAG|ftdi_wr:inst2|Mux89~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux70~0          ; |Open_JTAG|ftdi_wr:inst2|Mux70~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~1     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~1         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~2     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~2         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux63~0          ; |Open_JTAG|ftdi_wr:inst2|Mux63~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~3     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~3         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~4     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~4         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~5     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~5         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~6     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~6         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~7     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[0]~7         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[2]~9     ; |Open_JTAG|ftdi_wr:inst2|ft_byte[2]~9         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux67~0          ; |Open_JTAG|ftdi_wr:inst2|Mux67~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux67~1          ; |Open_JTAG|ftdi_wr:inst2|Mux67~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[3]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[3]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~11    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~11        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~12    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[3]~12        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux57~1          ; |Open_JTAG|ftdi_wr:inst2|Mux57~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux69~0          ; |Open_JTAG|ftdi_wr:inst2|Mux69~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux69~1          ; |Open_JTAG|ftdi_wr:inst2|Mux69~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[1]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[1]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux68~0          ; |Open_JTAG|ftdi_wr:inst2|Mux68~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux68~1          ; |Open_JTAG|ftdi_wr:inst2|Mux68~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[2]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[2]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux71~0          ; |Open_JTAG|ftdi_wr:inst2|Mux71~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~35          ; |Open_JTAG|ftdi_wr:inst2|Add7~35              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~35          ; |Open_JTAG|ftdi_wr:inst2|Add7~37              ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Add7~35          ; |Open_JTAG|ftdi_wr:inst2|Add7~37COUT1_48      ; cout1            ;
+; |Open_JTAG|ftdi_wr:inst2|Mux90~0          ; |Open_JTAG|ftdi_wr:inst2|Mux90~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_tms~0         ; |Open_JTAG|ftdi_wr:inst2|sm_tms~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux28~0          ; |Open_JTAG|ftdi_wr:inst2|Mux28~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~2          ; |Open_JTAG|ftdi_wr:inst2|Mux74~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~3          ; |Open_JTAG|ftdi_wr:inst2|Mux74~3              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~4          ; |Open_JTAG|ftdi_wr:inst2|Mux74~4              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~5          ; |Open_JTAG|ftdi_wr:inst2|Mux74~5              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~0  ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~0      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux26~0          ; |Open_JTAG|ftdi_wr:inst2|Mux26~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux72~2          ; |Open_JTAG|ftdi_wr:inst2|Mux72~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~0    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~0        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~1    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~1        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~2    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~2        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~3    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~3        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux29~0          ; |Open_JTAG|ftdi_wr:inst2|Mux29~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~4    ; |Open_JTAG|ftdi_wr:inst2|sm_state[0]~4        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux73~0          ; |Open_JTAG|ftdi_wr:inst2|Mux73~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux39~1          ; |Open_JTAG|ftdi_wr:inst2|Mux39~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux73~1          ; |Open_JTAG|ftdi_wr:inst2|Mux73~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux73~2          ; |Open_JTAG|ftdi_wr:inst2|Mux73~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_pos~1        ; |Open_JTAG|ftdi_wr:inst2|tap_pos~1            ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~7      ; |Open_JTAG|ftdi_wr:inst2|tap_state~7          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~8      ; |Open_JTAG|ftdi_wr:inst2|tap_state~8          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~9      ; |Open_JTAG|ftdi_wr:inst2|tap_state~9          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~10     ; |Open_JTAG|ftdi_wr:inst2|tap_state~10         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux111~1         ; |Open_JTAG|ftdi_wr:inst2|Mux111~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~11  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~11      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux110~0         ; |Open_JTAG|ftdi_wr:inst2|Mux110~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~12  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~12      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~3         ; |Open_JTAG|ftdi_wr:inst2|Equal1~3             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Equal1~4         ; |Open_JTAG|ftdi_wr:inst2|Equal1~4             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~13  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~13      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~14  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~14      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~15  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~15      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~16  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~16      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~17  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~17      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~18  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~18      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~19  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~19      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~20  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~20      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~21  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~21      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~22  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~22      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux110~1         ; |Open_JTAG|ftdi_wr:inst2|Mux110~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~23  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~23      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[1]~24  ; |Open_JTAG|ftdi_wr:inst2|tap_state[1]~24      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add2~2           ; |Open_JTAG|ftdi_wr:inst2|Add2~2               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Add1~0           ; |Open_JTAG|ftdi_wr:inst2|Add1~0               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux109~0         ; |Open_JTAG|ftdi_wr:inst2|Mux109~0             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux109~1         ; |Open_JTAG|ftdi_wr:inst2|Mux109~1             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~25     ; |Open_JTAG|ftdi_wr:inst2|tap_state~25         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~26     ; |Open_JTAG|ftdi_wr:inst2|tap_state~26         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~27     ; |Open_JTAG|ftdi_wr:inst2|tap_state~27         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~28     ; |Open_JTAG|ftdi_wr:inst2|tap_state~28         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~29     ; |Open_JTAG|ftdi_wr:inst2|tap_state~29         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~30     ; |Open_JTAG|ftdi_wr:inst2|tap_state~30         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~31     ; |Open_JTAG|ftdi_wr:inst2|tap_state~31         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~32     ; |Open_JTAG|ftdi_wr:inst2|tap_state~32         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~33     ; |Open_JTAG|ftdi_wr:inst2|tap_state~33         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux92~1          ; |Open_JTAG|ftdi_wr:inst2|Mux92~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~1  ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~1      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~2  ; |Open_JTAG|ftdi_wr:inst2|tap_nstate[3]~2      ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~0    ; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~0        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~1    ; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~1        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~4    ; |Open_JTAG|ftdi_wr:inst2|ft_state[2]~4        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux63~1          ; |Open_JTAG|ftdi_wr:inst2|Mux63~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]~13    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]~13        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[7]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[7]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux63~2          ; |Open_JTAG|ftdi_wr:inst2|Mux63~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux63~3          ; |Open_JTAG|ftdi_wr:inst2|Mux63~3              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux63~4          ; |Open_JTAG|ftdi_wr:inst2|Mux63~4              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]~14    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[7]~14        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|cd[2]~0          ; |Open_JTAG|ftdi_wr:inst2|cd[2]~0              ; combout          ;
+; |Open_JTAG|clock_mux:inst1|count[5]       ; |Open_JTAG|clock_mux:inst1|count[5]~3         ; cout0            ;
+; |Open_JTAG|clock_mux:inst1|count[4]       ; |Open_JTAG|clock_mux:inst1|count[4]~9         ; cout0            ;
+; |Open_JTAG|ftdi_wr:inst2|Mux65~0          ; |Open_JTAG|ftdi_wr:inst2|Mux65~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux65~1          ; |Open_JTAG|ftdi_wr:inst2|Mux65~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[5]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[5]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[6]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[6]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux64~0          ; |Open_JTAG|ftdi_wr:inst2|Mux64~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux64~1          ; |Open_JTAG|ftdi_wr:inst2|Mux64~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux64~2          ; |Open_JTAG|ftdi_wr:inst2|Mux64~2              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|ft_byte[6]~16    ; |Open_JTAG|ftdi_wr:inst2|ft_byte[6]~16        ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|db[7]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[7]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[7]~en         ; |Open_JTAG|ftdi_wr:inst2|db[7]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[6]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[6]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[6]~en         ; |Open_JTAG|ftdi_wr:inst2|db[6]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[5]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[5]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[5]~en         ; |Open_JTAG|ftdi_wr:inst2|db[5]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[4]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[4]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[4]~en         ; |Open_JTAG|ftdi_wr:inst2|db[4]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[3]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[3]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[3]~en         ; |Open_JTAG|ftdi_wr:inst2|db[3]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[2]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[2]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[2]~en         ; |Open_JTAG|ftdi_wr:inst2|db[2]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[1]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[1]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[1]~en         ; |Open_JTAG|ftdi_wr:inst2|db[1]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[0]~reg0       ; |Open_JTAG|ftdi_wr:inst2|db[0]~reg0           ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|db[0]~en         ; |Open_JTAG|ftdi_wr:inst2|db[0]~en             ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|Mux66~0          ; |Open_JTAG|ftdi_wr:inst2|Mux66~0              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux66~1          ; |Open_JTAG|ftdi_wr:inst2|Mux66~1              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[4]        ; |Open_JTAG|ftdi_wr:inst2|tdo_in[4]            ; regout           ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]~4      ; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]~4          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|db[2]~8          ; |Open_JTAG|ftdi_wr:inst2|db[2]~8              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|db[2]~9          ; |Open_JTAG|ftdi_wr:inst2|db[2]~9              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux0~2           ; |Open_JTAG|ftdi_wr:inst2|Mux0~2               ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux91~15         ; |Open_JTAG|ftdi_wr:inst2|Mux91~15             ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux74~7          ; |Open_JTAG|ftdi_wr:inst2|Mux74~7              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|Mux72~4          ; |Open_JTAG|ftdi_wr:inst2|Mux72~4              ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~34     ; |Open_JTAG|ftdi_wr:inst2|tap_state~34         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state~35     ; |Open_JTAG|ftdi_wr:inst2|tap_state~35         ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]~5      ; |Open_JTAG|ftdi_wr:inst2|tdo_in[0]~5          ; combout          ;
+; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~36  ; |Open_JTAG|ftdi_wr:inst2|tap_state[2]~36      ; combout          ;
+; |Open_JTAG|~GND                           ; |Open_JTAG|~GND                               ; combout          ;
+; |Open_JTAG|rst                            ; |Open_JTAG|rst~corein                         ; combout          ;
+; |Open_JTAG|txe                            ; |Open_JTAG|txe~corein                         ; combout          ;
+; |Open_JTAG|rxf                            ; |Open_JTAG|rxf~corein                         ; combout          ;
+; |Open_JTAG|pwr                            ; |Open_JTAG|pwr~corein                         ; combout          ;
+; |Open_JTAG|tdo                            ; |Open_JTAG|tdo~corein                         ; combout          ;
+; |Open_JTAG|tms                            ; |Open_JTAG|tms                                ; padio            ;
+; |Open_JTAG|tck                            ; |Open_JTAG|tck                                ; padio            ;
+; |Open_JTAG|wr                             ; |Open_JTAG|wr                                 ; padio            ;
+; |Open_JTAG|rd                             ; |Open_JTAG|rd                                 ; padio            ;
+; |Open_JTAG|tdi                            ; |Open_JTAG|tdi                                ; padio            ;
+; |Open_JTAG|trst                           ; |Open_JTAG|trst                               ; padio            ;
+; |Open_JTAG|led1                           ; |Open_JTAG|led1                               ; padio            ;
+; |Open_JTAG|led2                           ; |Open_JTAG|led2                               ; padio            ;
+; |Open_JTAG|test                           ; |Open_JTAG|test                               ; padio            ;
+; |Open_JTAG|db[7]                          ; |Open_JTAG|db~0                               ; combout          ;
+; |Open_JTAG|db[7]                          ; |Open_JTAG|db[7]~output                       ; padio            ;
+; |Open_JTAG|db[6]                          ; |Open_JTAG|db~1                               ; combout          ;
+; |Open_JTAG|db[6]                          ; |Open_JTAG|db[6]~output                       ; padio            ;
+; |Open_JTAG|db[5]                          ; |Open_JTAG|db~2                               ; combout          ;
+; |Open_JTAG|db[5]                          ; |Open_JTAG|db[5]~output                       ; padio            ;
+; |Open_JTAG|db[4]                          ; |Open_JTAG|db~3                               ; combout          ;
+; |Open_JTAG|db[4]                          ; |Open_JTAG|db[4]~output                       ; padio            ;
+; |Open_JTAG|db[3]                          ; |Open_JTAG|db~4                               ; combout          ;
+; |Open_JTAG|db[3]                          ; |Open_JTAG|db[3]~output                       ; padio            ;
+; |Open_JTAG|db[2]                          ; |Open_JTAG|db~5                               ; combout          ;
+; |Open_JTAG|db[2]                          ; |Open_JTAG|db[2]~output                       ; padio            ;
+; |Open_JTAG|db[1]                          ; |Open_JTAG|db~6                               ; combout          ;
+; |Open_JTAG|db[1]                          ; |Open_JTAG|db[1]~output                       ; padio            ;
+; |Open_JTAG|db[0]                          ; |Open_JTAG|db~7                               ; combout          ;
+; |Open_JTAG|db[0]                          ; |Open_JTAG|db[0]~output                       ; padio            ;
++-------------------------------------------+-----------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Aug 13 16:01:10 2010
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Open_JTAG -c Open_JTAG
+Info: Using vector source file "C:/AlteraWorks/91/NewOpenJtag/Open_JTAG.vwf"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|rst"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|txe"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|rxf"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|pwr"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|tdo"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|db[7]"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|db[6]"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|db[5]"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|db[4]"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|db[3]"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|db[2]"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|db[1]"
+Warning: Can't find signal in vector source file for input pin "|Open_JTAG|db[0]"
+Info: Inverted registers were found during simulation
+    Info: Register: |Open_JTAG|ftdi_wr:inst2|rd
+    Info: Register: |Open_JTAG|ftdi_wr:inst2|trst
+    Info: Register: |Open_JTAG|ftdi_wr:inst2|led1
+    Info: Register: |Open_JTAG|ftdi_wr:inst2|led2
+    Info: Register: |Open_JTAG|ftdi_wr:inst2|tap_ok
+    Info: Register: |Open_JTAG|ftdi_wr:inst2|cd[1]
+    Info: Register: |Open_JTAG|ftdi_wr:inst2|cd[2]
+    Info: Register: |Open_JTAG|ftdi_wr:inst2|cd[0]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       7.34 %
+Info: Number of transitions in simulation is 1867
+Info: Quartus II Simulator was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 113 megabytes
+    Info: Processing ended: Fri Aug 13 16:01:11 2010
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
