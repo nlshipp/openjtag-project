@@ -1,0 +1,163 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 224 360)
+	(text "serializer" (rect 1 1 43 13)(font "Arial" ))
+	(text "inst" (rect 8 280 25 292)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "wcks" (rect 0 24 24 36)(font "Arial" ))
+		(text "wcks" (rect 21 67 45 79)(font "Arial" ))
+		(line (pt 0 72)(pt 16 72))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "txe" (rect 0 24 15 36)(font "Arial" ))
+		(text "txe" (rect 21 83 36 95)(font "Arial" ))
+		(line (pt 0 88)(pt 16 88))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "rxf" (rect 0 24 14 36)(font "Arial" ))
+		(text "rxf" (rect 21 99 35 111)(font "Arial" ))
+		(line (pt 0 104)(pt 16 104))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "rst" (rect 0 24 12 36)(font "Arial" ))
+		(text "rst" (rect 21 115 33 127)(font "Arial" ))
+		(line (pt 0 120)(pt 16 120))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "tdo" (rect 0 24 15 36)(font "Arial" ))
+		(text "tdo" (rect 21 131 36 143)(font "Arial" ))
+		(line (pt 0 136)(pt 16 136))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "pwr" (rect 0 24 16 36)(font "Arial" ))
+		(text "pwr" (rect 21 147 37 159)(font "Arial" ))
+		(line (pt 0 152)(pt 16 152))
+	)
+	(port
+		(pt 160 72)
+		(output)
+		(text "wr" (rect 0 24 10 36)(font "Arial" ))
+		(text "wr" (rect 131 67 141 79)(font "Arial" ))
+		(line (pt 160 72)(pt 144 72))
+	)
+	(port
+		(pt 160 88)
+		(output)
+		(text "rd" (rect 0 24 9 36)(font "Arial" ))
+		(text "rd" (rect 132 83 141 95)(font "Arial" ))
+		(line (pt 160 88)(pt 144 88))
+	)
+	(port
+		(pt 160 56)
+		(output)
+		(text "siwu" (rect 0 24 21 36)(font "Arial" ))
+		(text "siwu" (rect 122 51 143 63)(font "Arial" ))
+		(line (pt 160 56)(pt 144 56))
+	)
+	(port
+		(pt 160 120)
+		(output)
+		(text "cd[2..0]" (rect 0 24 37 36)(font "Arial" ))
+		(text "cd[2..0]" (rect 108 115 145 127)(font "Arial" ))
+		(line (pt 160 120)(pt 144 120)(line_width 3))
+	)
+	(port
+		(pt 160 136)
+		(output)
+		(text "tck" (rect 0 24 15 36)(font "Arial" ))
+		(text "tck" (rect 127 131 142 143)(font "Arial" ))
+		(line (pt 160 136)(pt 144 136))
+	)
+	(port
+		(pt 160 152)
+		(output)
+		(text "tms" (rect 0 24 18 36)(font "Arial" ))
+		(text "tms" (rect 124 147 142 159)(font "Arial" ))
+		(line (pt 160 152)(pt 144 152))
+	)
+	(port
+		(pt 160 168)
+		(output)
+		(text "tdi" (rect 0 24 11 36)(font "Arial" ))
+		(text "tdi" (rect 130 163 141 175)(font "Arial" ))
+		(line (pt 160 168)(pt 144 168))
+	)
+	(port
+		(pt 160 200)
+		(output)
+		(text "led1" (rect 0 24 20 36)(font "Arial" ))
+		(text "led1" (rect 123 195 143 207)(font "Arial" ))
+		(line (pt 160 200)(pt 144 200))
+	)
+	(port
+		(pt 160 216)
+		(output)
+		(text "led2" (rect 0 24 20 36)(font "Arial" ))
+		(text "led2" (rect 123 211 143 223)(font "Arial" ))
+		(line (pt 160 216)(pt 144 216))
+	)
+	(port
+		(pt 160 232)
+		(output)
+		(text "test" (rect 0 24 18 36)(font "Arial" ))
+		(text "test" (rect 124 227 142 239)(font "Arial" ))
+		(line (pt 160 232)(pt 144 232))
+	)
+	(port
+		(pt 160 248)
+		(output)
+		(text "state[4..0]" (rect 0 24 50 36)(font "Arial" ))
+		(text "state[4..0]" (rect 97 243 147 255)(font "Arial" ))
+		(line (pt 160 248)(pt 144 248)(line_width 3))
+	)
+	(port
+		(pt 160 184)
+		(output)
+		(text "srst" (rect 0 24 18 36)(font "Arial" ))
+		(text "srst" (rect 120 176 138 188)(font "Arial" ))
+		(line (pt 160 184)(pt 144 184))
+	)
+	(port
+		(pt 160 104)
+		(bidir)
+		(text "db[7..0]" (rect 0 24 37 36)(font "Arial" ))
+		(text "db[7..0]" (rect 110 99 147 111)(font "Arial" ))
+		(line (pt 160 104)(pt 144 104)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 24 144 280))
+	)
+)

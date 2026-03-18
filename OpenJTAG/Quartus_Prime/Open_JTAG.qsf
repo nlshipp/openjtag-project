@@ -1,0 +1,133 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2019  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+# Date created = 15:21:56  January 15, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Open_JTAG_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE22F17C6
+set_global_assignment -name TOP_LEVEL_ENTITY Open_JTAG
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "19.1.0 SP0.02STD"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:21:56  JANUARY 15, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 SP0.02std Lite Edition"
+set_global_assignment -name VHDL_FILE serializer.vhd
+set_global_assignment -name VHDL_FILE clock_mux.vhd
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE Open_JTAG.bdf
+set_global_assignment -name QIP_FILE pll.qip
+set_location_assignment PIN_R8 -to CLK_50
+set_location_assignment PIN_F13 -to db[0] -comment "GPIO1_00 Pin 2"
+set_location_assignment PIN_R12 -to db[6] -comment "GPIO1_06 pin 9"
+set_location_assignment PIN_T11 -to db[7] -comment "GPIO1_07 pin 10"
+set_location_assignment PIN_T12 -to db[5] -comment "GPIO1_05 Pin 8"
+set_location_assignment PIN_R13 -to db[4] -comment "GPIO1_04 Pin 7"
+set_location_assignment PIN_T13 -to db[3] -comment "GPIO1_03 Pin 6"
+set_location_assignment PIN_T14 -to db[2] -comment "GPIO1_02 Pin 5"
+set_location_assignment PIN_T15 -to db[1] -comment "GPIO1_01 Pin 4"
+set_location_assignment PIN_A15 -to led1 -comment LED0
+set_location_assignment PIN_J14 -to led2 -comment "GPIO1_33 pin 40 was A13"
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to tck
+set_location_assignment PIN_R11 -to rd -comment "GPIO1_09 pin 14"
+set_location_assignment PIN_R10 -to wr -comment "GPIO1_11 pin 16"
+set_location_assignment PIN_N16 -to wcks -comment "GPIO1_23 pin 28"
+set_location_assignment PIN_R16 -to tck -comment "GPIO1_18 pin 23"
+set_location_assignment PIN_L16 -to tdi -comment "GPIO1_16 pin 21"
+set_location_assignment PIN_L15 -to tdo -comment "GPIO1_19 pin 24"
+set_location_assignment PIN_K16 -to tms -comment "GPIO1_17 pin 22"
+set_location_assignment PIN_P16 -to trst -comment "GPIO1_21 pin 26"
+set_location_assignment PIN_N12 -to rxf -comment "GPIO1_12 pin 17"
+set_location_assignment PIN_N9 -to txe -comment "GPIO1_14 pin 19"
+set_location_assignment PIN_N11 -to rst -comment "GPIO1_15 pin 20"
+set_location_assignment PIN_J13 -to test -comment "GPIO1_32 pin 39"
+set_location_assignment PIN_R14 -to pwr -comment "GPIO1_22 pin 27"
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rd
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rst
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rxf
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to test
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to txe
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to wr
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to trst
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pwr
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to tms
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to tdo
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to tdi
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to wcks
+set_global_assignment -name SDC_FILE Open_JTAG.sdc
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_location_assignment PIN_D1 -to state[3] -comment LED4
+set_location_assignment PIN_A11 -to state[4] -comment LED3
+set_location_assignment PIN_F3 -to state[2] -comment LED5
+set_location_assignment PIN_B1 -to state[1] -comment LED6
+set_location_assignment PIN_L3 -to state[0] -comment LED7
+set_location_assignment PIN_L14 -to debug[1] -comment "GPIO1_26 PIN 33"
+set_location_assignment PIN_M10 -to debug[2] -comment "GPIO1_28 PIN 35"
+set_location_assignment PIN_J16 -to debug[3] -comment "GPIO1_30 PIN 37"
+set_location_assignment PIN_P14 -to debug[4] -comment "GPIO1_25 PIN 32"
+set_location_assignment PIN_N14 -to debug[5] -comment "GPIO1_27 PIN 34"
+set_location_assignment PIN_L13 -to debug[6] -comment "GPIO1_29 PIN 36"
+set_location_assignment PIN_K15 -to debug[7] -comment "GPIO1_31 PIN 38"
+set_location_assignment PIN_N15 -to debug[0] -comment "GPIO1_24 PIN 31"
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to debug[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to led2
+set_location_assignment PIN_P15 -to busy -comment "GPIO1_20 pin 25"
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to busy
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to rst
+set_location_assignment PIN_P9 -to siwu -comment "GPIO1_13 pin 18"
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to siwu
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
