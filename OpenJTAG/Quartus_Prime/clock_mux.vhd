@@ -13,7 +13,7 @@ entity clock_mux IS
 
 		clk:	in std_logic;						-- External 48 MHz oscillator
 		cks:	in std_logic_vector(2 downto 0) := "000";	-- Clock divider
-		wcks:	out std_logic						-- Clock output
+		wcks:	out std_logic := '0'						-- Clock output
 	);
 
 end clock_mux;
@@ -28,7 +28,6 @@ begin
 clock_gen: process(clk, cks)
 
 begin
-
 	if cks = "000" then
 		wcks <= clk;
 	else

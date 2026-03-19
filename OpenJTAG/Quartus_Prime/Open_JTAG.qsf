@@ -87,7 +87,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to db
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rd
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rst
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rxf
@@ -130,4 +129,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to busy
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to rst
 set_location_assignment PIN_P9 -to siwu -comment "GPIO1_13 pin 18"
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to siwu
+set_instance_assignment -name IO_STANDARD "2.5 V" -to state
+set_instance_assignment -name IO_STANDARD "2.5 V" -to led1
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
